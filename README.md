@@ -1,57 +1,66 @@
-# Quiz App
+Meals App
 
-## Overview
-The **Quiz App** is a Flutter-based application designed to test users' knowledge through a series of quiz questions. The app offers an intuitive interface, engaging visuals, and tracks the highest scores achieved by players.
+Overview:
+-----------
+The Meals App is a Flutter-based application designed to allow users to browse, explore, and filter meals across various categories. Users can view detailed meal information, manage favorites, and apply dietary filters such as gluten-free, vegan, and vegetarian meals.
 
-## Features
-- **Start Screen**: Initiates the quiz experience with a welcoming message and a "Start Quiz" button.
-- **Question Screen**: Displays one question at a time, allowing users to select their answers.
-- **Results Screen**: Shows the results after completing the quiz, including the number of correct answers and the best score.
-- **Answer Summary**: Provides a summary of the questions answered, highlighting correct and incorrect responses.
-- **Restart Functionality**: Allows users to restart the quiz and attempt to beat their previous best score.
+Features:
+-----------
+1. **Meal Categories**:
+   - Browse meals by categories (e.g., Hamburgers, German, Quick & Easy).
+   - Select a category to view meals with information like cooking time, complexity, and cost.
 
-## File Structure
+2. **Meal Details**:
+   - View detailed information on each meal, including ingredients and steps for preparation.
+   - Mark/unmark meals as favorites.
 
-/quizz_app
-- main.dart              # Entry point of the application
-- start_screen.dart      # Widget for the start screen
-- questions_screen.dart   # Widget for displaying questions
-- results_screen.dart     # Widget for displaying results
-- answer_button.dart      # Widget for the answer button
-questions_summary/      # Folder containing summary-related widgets
-- question_identifier.dart  # Widget for question identifiers
-- summary_item.dart         # Widget for individual summary items
-- questions_summary.dart     # Widget for the summary of questions
-data/
-- questions.dart         # Contains the quiz questions and answers
-- pubspec.yaml              # Package configuration
+3. **Favorite Meals**:
+   - Access your favorite meals in a dedicated favorites section.
+   - Toggle meals in and out of favorites with user notifications.
 
-## Getting Started
-Prerequisites
-Flutter SDK installed on your machine.
-An IDE such as Android Studio, VS Code, or IntelliJ IDEA.
+4. **Dietary Filters**:
+   - Apply filters (e.g., Gluten-Free, Lactose-Free, Vegetarian, Vegan) to show only relevant meals.
 
-## Installation
-**Clone the repository:**
-git clone <repository-url>
-cd quizz_app
+5. **Responsive UI**:
+   - The app is optimized for various screen sizes and provides a seamless user experience.
 
-## Install the dependencies:
-flutter pub get
+Installation:
+--------------
+1. Clone the repository:
+   `git clone https://github.com/yourusername/meals_app.git`
+   
+2. Navigate to the project directory:
+   `cd meals_app`
 
-## Run the application:
-flutter run
+3. Install dependencies:
+   `flutter pub get`
 
-## Usage
-- Launch the app to see the start screen.
-- Tap on the "Start Quiz" button to begin.
-- Select answers for each question presented.
-- Once all questions are answered, review the results, including the best score.
-- Use the "Restart Quiz" button to take the quiz again.
+4. Run the app:
+   `flutter run`
 
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
+Technologies Used:
+-------------------
+- **Flutter**: Cross-platform mobile framework.
+- **Dart**: Programming language.
+- **Riverpod**: For state management.
+- **StateNotifier**: Used for managing favorites and filters.
 
-## License
-This project is licensed under the NTNU License. See the [LICENSE](./LICENSE) file for more details.
+File Structure:
+---------------
+- `lib/models/`: Contains the data models for the categories, meals, and ratings.
+- `lib/providers/`: Handles the state management for filters, favorites, and meal ratings.
+- `lib/screens/`: Contains the UI screens for categories, meals, meal details, and filters.
+- `lib/widgets/`: Contains reusable widgets for the UI (e.g., category grid, meal item).
+
+Contributing:
+--------------
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch-name`
+3. Commit your changes: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature-branch-name`
+5. Open a pull request.
+
+License:
+--------
+This project is licensed under the MIT License.
 
